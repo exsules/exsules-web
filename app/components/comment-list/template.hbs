@@ -1,0 +1,20 @@
+<div class="comment-box">
+  <ul class="comment-list">
+    {{#each sortedComments as |comment|}}
+      <li>
+        <div class="author-img">
+          <img src="http://localhost:4200/img/profile_original.jpg">
+        </div>
+        <div class="author-name">
+          <strong>{{#link-to 'user' comment.user.id}}{{comment.author}}{{/link-to}}</strong> {{comment.likes-count}}
+          <small><span class="post-date" title="{{comment.created-at}}">{{moment-from-now comment.created-at hideSuffix=true interval=60000}}</span></small>
+        </div>
+        <div class="comment-text">
+          <p>{{comment.text}}</p>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+
+  {{add-comment onSubmit=(action "submitComment")}}
+</div>

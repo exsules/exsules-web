@@ -1,0 +1,10 @@
+<div class="col-md-6 posts-column">
+  <div class="well">
+    <form class="form-horizontial">
+      <div class="form-group">
+        {{textarea cols="35" rows="3" value=message type="text" class="form-control" placeholder="What's new with you?"}}
+      </div>
+      <button {{action "newPost"}} class="btn btn-default" type="submit" disabled={{isDisabled}}>Post</button>
+    </form>
+  </div>
+</div>

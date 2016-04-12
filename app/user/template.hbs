@@ -1,0 +1,29 @@
+<section class="panel">
+  <div class="cover-photo">
+    <div class="timeline-img">
+      <img src="http://localhost:4200/img/background_medium.jpg">
+    </div>
+
+    <div class="name">
+      <h2>{{#link-to 'user' model.id}}{{model.full-name}}{{/link-to}}</h2>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="profile-thumb">
+      <img src="http://localhost:4200/img/profile_original.jpg">
+    </div>
+
+    <div class="profile-nav">
+      <ul>
+        <li>{{#link-to 'user.about' model.id}}{{t 'user.about.title'}}{{/link-to}}</li>
+        <li>{{#link-to 'user.posts' model.id}}{{t 'user.posts.title'}}{{/link-to}}</li>
+        <li>{{#link-to 'user.photos' model.id}}{{t 'user.photos.title'}}{{/link-to}}</li>
+        <li>{{#link-to 'user.videos' model.id}}{{t 'user.videos.title'}}{{/link-to}}</li>
+        <li>{{#link-to 'user.friends' model.id}}{{t 'user.friends.title'}}{{/link-to}}</li>
+        <li>{{#link-to 'user.likes' model.id}}{{t 'user.likes.title'}}{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
+  {{outlet}}
+</section>

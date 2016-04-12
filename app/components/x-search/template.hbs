@@ -1,0 +1,19 @@
+{{input name="query" value=query placeholder="Search for people and pages"}}
+
+{{#if search.noResults}}
+  <li class="no-results list-unstyled">
+    No results for <span>{{query}}</span>
+  </li>
+{{/if}}
+
+<div class="row">
+  {{#each search.results as |result|}}
+    <div class="col-xs-6 col-sm-4">
+      <a href="{{result.link}}">
+        <div class="card-block">
+          <h4 class="card-title">{{result.first-name}} {{result.last-name}}</h4>
+        </div>
+      </a>
+    </div>
+  {{/each}}
+</div>

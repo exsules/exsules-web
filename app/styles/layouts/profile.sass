@@ -1,0 +1,48 @@
+.cover-photo
+  position: relative
+
+.timeline-img img
+  width: 100%
+  border-radius: 4px 4px  0 0
+  height: 400px
+  border-bottom: 1px solid $gray
+
+.profile-thumb
+  float: left
+  position: relative
+  img
+    width: 140px
+    height: 140px
+    margin-top: -90px
+    border-radius: 50%
+    border: 1px solid $color-exsules
+
+.name
+  bottom: 5px
+  left: 175px
+  position: absolute
+
+  h2 a
+    color: $color-exsules
+    font-size: 25px
+    text-shadow: 0 1px 0 rgba($black, 0.4)
+    text-rendering: optimizelegibility
+
+.profile-nav
+  li
+    display: inline
+    > a
+      display: inline-block
+      line-height: 1.4
+      margin: 0 0 0 20px
+      padding: 0 0 10px 0
+      color: $black
+      transition: border-color .218s
+      border-bottom: 2px solid transparent
+      &:hover
+        border-bottom: 2px solid $color-exsules
+      &:focus
+        text-decoration: none
+      &.active
+        font-weight: bold
+        border-bottom: 2px solid $color-exsules

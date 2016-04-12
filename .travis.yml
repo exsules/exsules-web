@@ -1,23 +1,44 @@
 ---
 language: node_js
 node_js:
-  - "0.12"
+  - "4"
+  - "5"
 
 sudo: false
 
+env:
+  - EMBER_VERSION=default
+  - EMBER_VERSION=release
+  - EMBER_VERSION=beta
+  - EMBER_VERSION=canary
+
+matrix:
+  allow_failures:
+    - env: EMBER_VERSION=release
+    - env: EMBER_VERSION=beta
+    - env: EMBER_VERSION=canary
+  fast_finish: true
+
 cache:
+  branch: md5deep
   directories:
     - node_modules
+    - bower_components
 
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
+  - npm config set spin false
+  - npm install -g bower
+  - npm install phantomjs-prebuilt
 
 install:
-  - npm install -g bower
   - npm install
   - bower install
 
 script:
-  - npm test
+  - ember try $EMBER_VERSION
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: "mnNEc1KQfUZRMxVM16aHFoDxwRp6IKtv9oBDBrVeKsISMztPXZRrqlx/ghjRm3KRAEHO/YE6bpHJrAAcxw+QZVtp6vX7v/yHF7t5vL7l7b6UF3L4XFg5ldtiTKiqEvVibajSw49/NoeHB6bElYbblmAZDvsU05mzWV0hi7b41txDLNUuY7iu66S9CRaYEPpTrfFmYMcLx8aVxZwwIGq/5OsXpK53G5KR/aZjGX/JQ/VSsZJOci6zIp5DLX6naY9WwyDD77c8QVWvaWOyUs40HdZUHg3BlCFwLiK2lsR0U68wqTFyACleY1jgD4x5krlbwAZ7H+LjD23kBI7QNznxe5Pv52JMAY6uBa5/85sgzpQg8mLLcMpGDTceCJ2GcK9/AuZo9kWtVyMIO1DOrzAEo+Xgq0Pn2wyhz65fqzZr7kgiRRGNmIa0b13IqjZWqqU1w0amTyzUWrzg0AAgW0BK5/L2jt4u+Tr5pdrw/xyqFhoiTMNSQsGFPPj7G45HlByjmBrki/tl2otu6dKrYospIYaXTMcghWTpsrSgrYnlj3YzztBYxtRUa0ZXxHFvncDVVAReX4V18Sya5C1xDHLzEs/EZG9PvC8MGxXPc4EbGYCmwdynF3+pAyhK1BDNxTh1EQFyo+p9k1ugFphy6tBDsDUERXrFW0X3QzuBaAIX2As="

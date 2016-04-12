@@ -13,18 +13,33 @@ module.exports = function(environment) {
       }
     },
 
+    i18n: {
+      defaultLocale: 'en',
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    apiEndpoint: 'https://api.exsules.com',
+    apiVersion: 'v1',
+
+    'ember-simple-auth': {
+      base: {
+        store: 'session-store:local-storage',
+        serverTokenEndpoint: 'a'
+      },
     }
   };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiEndpoint = 'http://localhost:3000';
   }
 
   if (environment === 'test') {

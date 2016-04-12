@@ -1,0 +1,54 @@
+.author-info
+  .author-img
+    float: left
+    position: relative
+    height: 46px
+    width: 46px
+
+    img
+      width: 46px
+      height: 46px
+      border-radius: 50%
+      border: 3px solid $white
+
+  .author-name
+    position: relative
+    top: 5px
+    left: 10px
+
+  span.post-date
+    top: 5px
+    left: 10px
+    float: right
+    margin-right: 10px
+    color: $gray
+
+.post-message
+  p
+    white-space: pre-line
+    font-size: 13px
+
+.open-graph
+  padding: 10px
+  border: 1px solid $white
+
+  .title
+    a
+      color: lighten($black, 30)
+
+      &:hover
+        color: $color-exsules
+
+  .url
+    font-size: 11px
+
+    a
+      color: lighten($black, 50)
+
+      &:hover
+        color: $color-exsules
+
+  .description
+    color: lighten($black, 50)
+    padding-top: 15px
+    font-size: 11px
