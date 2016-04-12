@@ -1,0 +1,150 @@
+.header-nav {
+  background-color: #fff;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0.4s ease-in;
+  -moz-transition: background-color 0.4s ease-in;
+  transition: background-color 0.4s ease-in;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0px;
+
+  .navbar-nav {
+    > li {
+      color: #fff;
+      > a {
+        border: none;
+        display: block;
+        color: #929292;
+        font-weight: normal;
+        padding: 20px;
+        padding-bottom: 21px;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        &:hover {
+          background-color: transparent;
+          color: $color-exsules;
+
+        }
+        &:hover, &:active, &:focus {
+          text-decoration: none;
+          border: none;
+          outline: none;
+          outline-offset: 0;
+          background-color: transparent;
+
+        }
+      }
+      > ul {
+        &.my-account-dropdown {
+          margin-top: 1px;
+          border-radius: 0px;
+          border: 1px solid #E5E5E5;
+          border-bottom: none;
+          padding: 0;
+          position: absolute;
+          background-color: $white;
+
+          li a {
+            float: none;
+            border-bottom: 1px solid #E5E5E5;
+            font-size: 13px;
+            color: #666;
+            cursor: pointer;
+            padding-top: 8px;
+            padding-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  a.navbar-brand {
+    outline: 0;
+    -webkit-transition: color 0.4s ease-in;
+    -moz-transition: color 0.4s ease-in;
+    transition: color 0.4s ease-in;
+    color: $color-exsules;
+    text-shadow: 0 0 0.2em #ccc;
+    text-transform: lowercase;
+    font-size: 33px;
+    padding-top: 20px;
+    padding-buttom: 0px;
+    padding-left: 0px;
+
+    &:hover {
+      color: #666;
+    }
+  }
+}
+
+.header-buttons {
+  a {
+    &.header-link:hover {
+      text-decoration: none;
+    }
+    font-weight: normal;
+    color: #929292;
+    padding: 13px;
+    float: left;
+  }
+
+  .header-link {
+    padding: 20px;
+    padding-bottom: 21px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+button.header-link.header-link-button {
+  background-color: transparent;
+  border: none;
+  color: #929292;
+  &:focus, &:active, &:hover {
+    outline: 0;
+    -webkit-transition: text-shadow 0.2s ease-in;
+    -moz-transition: text-shadow 0.2s ease-in;
+    transition: text-shadow 0.2s ease-in;
+    text-shadow: 0 0 0.5em #faf9f7;
+  }
+}
+
+.nav-pills {
+  > li > a {
+    padding: 5px 12px;
+  }
+  & > li.active > a {
+    text-align: center;
+    color: $white;
+    border-radius: 0;
+    background-color: $color-exsules;
+    &:hover,
+    &:focus {
+      background-color: $color-exsules;
+    }
+  }
+  & > li > a:hover {
+    border-radius: 0;
+    background-color: $color-exsules;
+  }
+}
+
+.count-info .label {
+  line-height: 12px;
+  padding: 2px 5px;
+  position: absolute;
+  right: 3px;
+  top: 12px;
+}
+
+.dropdown-alerts {
+  width: 310px;
+  padding: 10px 10px 10px 10px;
+
+  li a {
+    font-size: 12px;
+  }
+}

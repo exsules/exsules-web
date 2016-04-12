@@ -1,0 +1,41 @@
+<div class="noHeaderColumns">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Welcome to exsules</h2>
+      <p>Design as if your fucking life depended on it. When you sit down to work, external critics aren’t the enemy. It’s you who you must to fight against to do great fucking work. You must overcome yourself. Don’t fucking lie to yourself. </p>
+      <p>Use your fucking hands. If you fucking give up, you will achieve nothing. Respect your fucking craft. Your rapidograph pens are fucking dried up, the x-acto blades in your bag are rusty, and your mind is dull. Stop clicking your mouse, get messy,</p>
+    </div>
+
+    <div class="col-md-6">
+      <div class="content">
+        <form class="m-t-15" {{action 'authenticateWithDevise' on='submit'}}>
+          <div class="form-group">
+            {{text-field type="email" value=identification placeholderKey="user.email.title" id="email" data-parsley-trigger="change" required="required" autofocus="true"}}
+          </div>
+          <div class="form-group">
+            {{password-field value=password placeholderKey="user.password.title" id="password" capslockOn=capslockOn data-parsley-trigger="change" data-parsley-minlength="6" required="required"}}
+          </div>
+          {{#if isWorking}}
+            <button class="btn btn-default btn-block" disabled><span class="loading-indicator--white"><i></i><i></i><i></i></span> {{t "login"}}</button>
+          {{else}}
+            <button class="btn btn-default btn-block" disabled={{isWorking}}>{{t "login"}}</button>
+          {{/if}}
+        </form>
+
+        {{#if errorMessage}}
+          <p>Error: <b>{{errorMessage}}</b></p>
+        {{/if}}
+
+        <p class="m-t-15">
+          {{#link-to 'application'}}<small>{{t "forgot_password"}}</small>{{/link-to}}
+        </p>
+        <p class="text-muted text-center">
+          <small>{{t "need_account"}}</small>
+        </p>
+        {{#link-to 'application' class='btn btn-white btn-sm btn-block'}}{{t "button.create_account"}}{{/link-to}}
+      </div>
+    </div>
+
+  </div>
+</div>
+

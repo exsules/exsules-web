@@ -1,0 +1,35 @@
+.loading-indicator
+  display: inline-block
+  vertical-align: middle
+  i
+    position: relative
+    display: inline-block
+    width: 8px
+    height: 8px
+    background-color: $color-exsules
+    border-radius: 50%
+    line-height: 0
+    transform-origin: center center
+    animation: bouncedelay 1s infinite ease-in-out
+    &:nth-child(1)
+      animation-delay: -.32s
+    &:nth-child(2)
+      animation-delay: -.16s
+
+@keyframes bouncedelay
+  0%, 80%, 100%
+    transform: scale(0)
+  40%
+    transform: scale(1, 1)
+
+.loading-container
+  text-align: center
+  padding: 1.5em 1em
+
+.inline-block
+  display: inline-block
+
+.loading-indicator--white
+  @extend .loading-indicator
+  i
+    background-color: $white

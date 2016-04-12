@@ -1,0 +1,31 @@
+{{#each sortedPosts as |post|}}
+  <div class="col-md-6 posts-column">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="author-info">
+          <div class="author-img">
+            <img src="http://localhost:4200/img/profile_original.jpg">
+          </div>
+          <div class="author-name">
+            <strong>{{#link-to 'user' post.from-user-id}}{{post.author}}{{/link-to}}</strong>
+            <small><span class="post-date" title="{{post.created-at}}">{{moment-from-now post.created-at hideSuffix=true interval=60000}}</span></small>
+          </div>
+        </div>
+        <hr>
+        <div class="post-message">
+          <p>{{parse-text post.message}}</p>
+        </div>
+        <div class="clearfix"></div>
+        <button {{action "sendLike"}} title="{{t 'posts.like.title'}}" class="btn btn-small like">{{fa-icon "heart-o"}}</button>{{post.likes-count}}
+        <button title="{{t 'posts.comments.title'}}" class="btn btn-small">{{fa-icon "comments-o"}}</button>{{post.comments-count}}
+        <div class="pull-right"><button title="{{t 'posts.share.title'}}" class="btn btn-small">{{fa-icon "share-square-o"}}</button>{{post.reposts-count}}</div>
+        <hr>
+        {{#if post.comments.isSettled}}
+          {{comment-list comment=post.comments}}
+        {{else}}
+          {{loading-indicator}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+{{/each}}
