@@ -51,8 +51,5 @@
     "ember-try": "0.2.2",
     "ember-wrap-urls": "0.0.3",
     "loader.js": "^4.0.1"
-  },
-  "dependencies": {
-    "ember-data": "release"
   }
 }
