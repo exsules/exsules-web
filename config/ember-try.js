@@ -6,23 +6,26 @@ module.exports = {
     },
     {
       name: 'release',
-      dependencies: {
-        'ember': 'release',
-        'ember-data': 'release'
+      bower: {
+        dependencies: {
+          'ember': 'release'
+        }
       }
     },
     {
       name: 'beta',
-      dependencies: {
-        'ember': 'beta',
-        'ember-data': 'beta'
+      bower: {
+        dependencies: {
+          'ember': 'beta'
+        }
       }
     },
     {
       name: 'canary',
-      dependencies: {
-        'ember': 'canary',
-        'ember-data': 'canary'
+      bower: {
+        dependencies: {
+          'ember': 'canary'
+        }
       }
     }
   ]
