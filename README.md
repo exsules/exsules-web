@@ -1,7 +1,7 @@
 # Exsules
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[![Build Status](https://img.shields.io/travis/exsules/exsules-web/master.svg?style=flat-square)](https://travis-ci.org/exsules/exsules-web)
+[![Code Climate](https://img.shields.io/codeclimate/github/exsules/exsules-web.svg?style=flat-square)](https://codeclimate.com/github/exsules/exsules-web)
 
 ## Prerequisites
 
