@@ -48,7 +48,7 @@
     "ember-moment": "6.1.0",
     "ember-resolver": "^2.0.3",
     "ember-simple-auth": "git+https://github.com/simplabs/ember-simple-auth",
-    "ember-try": "0.2.2",
+    "ember-try": "0.2.7",
     "ember-wrap-urls": "0.0.3",
     "loader.js": "^4.0.1"
   }
