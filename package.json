@@ -45,7 +45,7 @@
     "ember-i18n": "git+https://github.com/jamesarosen/ember-i18n.git#e6098624d45b6f3b02e6b4fedc50569825d26780",
     "ember-load-initializers": "^0.5.1",
     "ember-masonry-grid": "git+https://github.com/gmurphey/ember-masonry-grid.git#df040b2065749e73cf6692536dd4b34dbd1f291e",
-    "ember-moment": "6.1.0",
+    "ember-moment": "7.0.2",
     "ember-resolver": "^2.0.3",
     "ember-simple-auth": "git+https://github.com/simplabs/ember-simple-auth",
     "ember-try": "0.2.5",
