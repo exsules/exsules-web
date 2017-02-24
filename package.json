@@ -50,6 +50,6 @@
     "ember-simple-auth": "git+https://github.com/simplabs/ember-simple-auth",
     "ember-try": "0.2.5",
     "ember-wrap-urls": "1.0.3",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.2.1"
   }
 }
